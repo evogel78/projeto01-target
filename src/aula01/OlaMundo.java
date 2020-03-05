@@ -73,6 +73,8 @@ static Boolean meuBoolean;
 		om.imprimeNaTelaBoaNoite();
 		
 		om.imprimeNaTelaBoaNoite1("Boa noite 1 !");
+		
+
 
 	}
 
@@ -82,8 +84,12 @@ static Boolean meuBoolean;
 	}
 
 	public Double soma(Double d1, Double d2) {
-					
-		return d1+d2;
+		
+		if(d1>10 && d2>10){
+			return d1+d2;
+		}
+		return -1.0;
+	
 	}
 	
 	public Double subtracao(Double d1, Double d2) {
