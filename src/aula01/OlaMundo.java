@@ -69,7 +69,16 @@ static Boolean meuBoolean;
 		r = om.divisao(4d, 0d);
 		
 		System.out.println(r);
+		
+		om.imprimeNaTelaBoaNoite();
+		
+		om.imprimeNaTelaBoaNoite1("Boa noite 1 !");
 
+	}
+
+	private void imprimeNaTelaBoaNoite1(String mensagem) {
+	
+		System.out.println(mensagem);
 	}
 
 	public Double soma(Double d1, Double d2) {
@@ -86,6 +95,11 @@ static Boolean meuBoolean;
 		
 		return d1/d2;
 	}
+	
+	private void imprimeNaTelaBoaNoite() {
+		System.out.println("Boa noite!");
+	}
+	
 }
 		
 		/* <modificador de acesso>
