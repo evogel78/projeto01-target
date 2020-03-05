@@ -17,6 +17,7 @@ static Boolean meuBoolean;
 		long comprimentoAnimal=120;
 		byte idadeAnimal=127;
 		boolean temDono=true;
+		boolean temDono2=true;
 		
 	
 		
