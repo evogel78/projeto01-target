@@ -19,8 +19,6 @@ static Boolean meuBoolean;
 		boolean temDono=true;
 		boolean temDono3=true;
 		
-	
-		
 		Character letraInicialAnimal='D';
 		
 		String minhaString="Target";
@@ -55,16 +53,57 @@ static Boolean meuBoolean;
 		BigDecimal dezPorCentoDoValor=valorCheio.multiply(new BigDecimal("0.1"));
 		System.out.println(dezPorCentoDoValor.setScale(2, RoundingMode.HALF_EVEN));
 		
+
 		System.out.println(meuBoolean);
-		
-		
-		
-		
-		
-		
 	
+		OlaMundo om = new OlaMundo();
 		
+		Double r = om.soma(4d, 5d);
 		
+		System.out.println(r);
+		
+		r = om.subtracao(4d, 5d);
+		
+		System.out.println(r);
+	
+		r = om.divisao(4d, 0d);
+		
+		System.out.println(r);
+
+	}
+
+	public Double soma(Double d1, Double d2) {
+					
+		return d1+d2;
 	}
 	
+	public Double subtracao(Double d1, Double d2) {
+		
+		return d1-d2;
+	}
+	
+	public Double divisao(Double d1, Double d2) {
+		
+		return d1/d2;
+	}
 }
+		
+		/* <modificador de acesso>
+			-private
+			-public
+			-protected
+			-package
+			
+		   <tipo de retorno>
+		   
+		   	<nome do method>
+		
+		*/
+		
+		
+	
+		
+		
+
+	
+
