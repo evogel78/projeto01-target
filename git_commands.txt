@@ -1,0 +1,567 @@
+sala05@DESKTOP-1E80GDV MINGW64 ~
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+sala05@DESKTOP-1E80GDV MINGW64 ~
+$ pwd
+/c/Users/sala05
+
+sala05@DESKTOP-1E80GDV MINGW64 ~
+$ cd c:
+
+sala05@DESKTOP-1E80GDV MINGW64 /c
+$ ls
+'$Recycle.Bin'/             NVIDIA/          'Program Files (x86)'/  'System Volume Information'/
+'Arquivos de Programas'@    pagefile.sys      ProgramData/            Users/
+'Documents and Settings'@   PerfLogs/         Recovery/               Windows/
+ hiberfil.sys              'Program Files'/   swapfile.sys
+
+sala05@DESKTOP-1E80GDV MINGW64 /c
+$ mkdir dev
+
+sala05@DESKTOP-1E80GDV MINGW64 /c
+$ cd dev
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev
+$ mkdir projeto01
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev
+$ cd projeto01
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01
+$ git init
+Initialized empty Git repository in C:/dev/projeto01/.git/
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ ls -la
+total 4
+drwxr-xr-x 1 sala05 1049089 0 mar  4 19:11 ./
+drwxr-xr-x 1 sala05 1049089 0 mar  4 19:11 ../
+drwxr-xr-x 1 sala05 1049089 0 mar  4 19:11 .git/
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ ls -la
+total 5
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:14 ./
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:11 ../
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:11 .git/
+-rw-r--r-- 1 sala05 1049089 29 mar  4 19:14 arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo2.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ ls
+arquivo.txt  arquivo2.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ cat arquivo.txt
+Target Trust - curso de Java
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ cat arquivo.txt | Ja
+bash: Ja: command not found
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ cat arquivo.txt | grep Ja
+Target Trust - curso de Java
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo.txt
+        arquivo2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git add arquivo.txt
+warning: LF will be replaced by CRLF in arquivo.txt.
+The file will have its original line endings in your working directory
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ ls
+arquivo.txt  arquivo2.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ ls -la
+total 6
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:16 ./
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:11 ../
+drwxr-xr-x 1 sala05 1049089  0 mar  4 19:19 .git/
+-rw-r--r-- 1 sala05 1049089 29 mar  4 19:14 arquivo.txt
+-rw-r--r-- 1 sala05 1049089  8 mar  4 19:16 arquivo2.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   arquivo.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo2.txt
+
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "Commit do primeiro txt file"
+[master (root-commit) 149fc75] Commit do primeiro txt file
+ Committer: sala05 <sala05@targettrust.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        arquivo2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git remote add origin https://github.com/evogel78/Curso_Java_TargetTrust.git
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 259 bytes | 259.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/evogel78/Curso_Java_TargetTrust.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git add arquivo2.txt
+warning: LF will be replaced by CRLF in arquivo2.txt.
+The file will have its original line endings in your working directory
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   arquivo2.txt
+
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   arquivo2.txt
+
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "Commit do segundo txt file"
+[master 98ddd75] Commit do segundo txt file
+ Committer: sala05 <sala05@targettrust.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 arquivo2.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/evogel78/Curso_Java_TargetTrust.git
+   149fc75..98ddd75  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit
+error: pathspec '-' did not match any file(s) known to git
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "Segundo commit do txt file"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -a
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt^C
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ $ git commit -m "Commit do primeiro txt file"
+bash: $: command not found
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "2nd Commit do primeiro txt file"
+bash: $: command not found
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "2nd Commit do primeiro txt file"
+bash: $: command not found
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "Segundo commit do txt file"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git push -u origin master
+Everything up-to-date
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config --global user.name "EDUARDO VOGEL"
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config --global user.email "evogel@itbox.com.br"
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git commit -m "Terceiro commit do txt file"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config list
+error: key does not contain a section: list
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config -l
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files\\Notepad++\\notepad++.exe" -multiInst -notabbar -nosession -noPlugin
+credential.helper=manager
+user.name=EDUARDO VOGEL
+user.email=evogel@itbox.com.br
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/evogel78/Curso_Java_TargetTrust.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ nano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+ile"t commit -m "Quartouser.name=EDUARDO VOGELuser.name=EDUARDO VOGELuser.name=EDUARDO VOGELTerceiro commit do txt fi
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/evogel78/Curso_Java_TargetTrust.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+
+sagit config [Bonfig --global user.email "evogel@itbox.com.br"
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config user.name "EDUARDO VOGEL"
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ git config user.email "evogel@itbox.com.br"
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$ cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/evogel78/Curso_Java_TargetTrust.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[user]
+        name = EDUARDO VOGEL
+        email = evogel@itbox.com.br
+
+sanano arquivo.txt
+
+sala05@DESKTOP-1E80GDV MINGW64 /c/dev/projeto01 (master)
+$
