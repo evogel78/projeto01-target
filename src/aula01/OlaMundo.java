@@ -20,11 +20,6 @@ static Boolean meuBoolean;
 		boolean temDono=true;
 		boolean temDono3=true;
 		
-	OlaMundo olamundinho = new OlaMundo();
-	
-		
-		System.out.println(olamundinho.lerTeclado());
-		
 		Character letraInicialAnimal='D';
 		
 		String minhaString="Target";
@@ -35,7 +30,7 @@ static Boolean meuBoolean;
 		byte b=1;
 		wrapper =(double) b;
 		
-		
+		/*
 		System.out.println(codigoPedigree);
 		System.out.println(pesoAnimal);
 		System.out.println(precoAnimal);
@@ -45,7 +40,6 @@ static Boolean meuBoolean;
 		System.out.println(temDono);
 		System.out.println(letraInicialAnimal);
 		System.out.println(codigoPedigree + CodigoPedigree);
-		
 		System.out.println(minhaString);
 		System.out.println(minhaString1);
 		System.out.println(wrapper);
@@ -54,53 +48,71 @@ static Boolean meuBoolean;
 		System.out.println(minhaString.indexOf("t"));
 		System.out.println(minhaString.concat(" Trust"));
 		System.out.println(minhaString1.substring(9));
-		
 		BigDecimal valorCheio=new BigDecimal("150.97");
 		BigDecimal dezPorCentoDoValor=valorCheio.multiply(new BigDecimal("0.1"));
 		System.out.println(dezPorCentoDoValor.setScale(2, RoundingMode.HALF_EVEN));
-		
-
-		System.out.println(meuBoolean);
-	
-		OlaMundo om = new OlaMundo();
-		
-		Double r = om.soma(4d, 5d);
-		
+		System.out.println(meuBoolean); */
+		/*Double r = om.soma(4d, 5d);
 		System.out.println(r);
-		
 		r = om.subtracao(4d, 5d);
-		
-		System.out.println(r);
-	
+	    System.out.println(r);
 		r = om.divisao(4d, 0d);
-		
 		System.out.println(r);
-		
 		om.imprimeNaTelaBoaNoite();
-		
 		om.imprimeNaTelaBoaNoite1("Boa noite 1 !");
+		*/
 		
+		
+		
+		
+		
+		
+		
+		
+		
+					
+		
+		OlaMundo om = new OlaMundo();
 
-
+		om.verificaAprovacao(om.calculaMedia(om.soma(om.soma(Double.valueOf(om.lerTeclado()), Double.valueOf(om.lerTeclado())), Double.valueOf(om.lerTeclado()))));
+		
+		
 	}
 
+	
+	private void verificaAprovacao(Double media) {
+		if (media>=7) {
+			System.out.println("Média= " + media + " Resultado: APROVADO");
+			return;
+		}
+		System.out.println("Média= " + media + " - Resultado: REPROVADO");
+	}
+	
+	
+	
+	
 	private void imprimeNaTelaBoaNoite1(String mensagem) {
 	
 		System.out.println(mensagem);
 	}
 
 	public Double soma(Double d1, Double d2) {
-		
-		if(d1>10 && d2>10){
+	
 			return d1+d2;
-		}
-		return -1.0;
 	
 	}
 	
 	public Double subtracao(Double d1, Double d2) {
 		
 		return d1-d2;
+	}
+	
+	public Double calculaMedia(Double d1) {
+		
+	    BigDecimal bd = BigDecimal.valueOf(d1/3);
+	    bd = bd.setScale(2, RoundingMode.HALF_UP);
+	    return bd.doubleValue();
+
 	}
 	
 	public Double divisao(Double d1, Double d2) {
@@ -121,6 +133,8 @@ static Boolean meuBoolean;
 	
 	}
 	
+
+
 }
 		
 		/* <modificador de acesso>
