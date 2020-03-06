@@ -2,6 +2,7 @@ package aula01;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Scanner;
 
 public class OlaMundo {
 	
@@ -18,6 +19,11 @@ static Boolean meuBoolean;
 		byte idadeAnimal=127;
 		boolean temDono=true;
 		boolean temDono3=true;
+		
+	OlaMundo olamundinho = new OlaMundo();
+	
+		
+		System.out.println(olamundinho.lerTeclado());
 		
 		Character letraInicialAnimal='D';
 		
@@ -104,6 +110,15 @@ static Boolean meuBoolean;
 	
 	private void imprimeNaTelaBoaNoite() {
 		System.out.println("Boa noite!");
+	}
+	
+	
+	public String lerTeclado() {
+		
+		Scanner entradaConsole = new Scanner(System.in);
+		
+		return entradaConsole.next();
+	
 	}
 	
 }
