@@ -77,6 +77,35 @@ static Boolean meuBoolean;
 		om.verificaAprovacao(om.calculaMedia(om.soma(om.soma(Double.valueOf(om.lerTeclado()), Double.valueOf(om.lerTeclado())), Double.valueOf(om.lerTeclado()))));
 		
 		
+		Double dd1 = 3.0;
+		Double dd2 = 3.0;
+		
+		if(dd1==dd2) System.out.println("Iguais1");
+		if(dd1 instanceof Double) System.out.println("Iguais2");
+		
+		dd2 = dd2 > 3 ? 3.0 : 4.0;
+		
+		Double[] listaDeNotas = new Double[10];
+		
+		Double soma = 0.0;
+		Integer x = 1;
+		listaDeNotas[0]=2.5;
+
+		while (x < 10)
+		{
+			listaDeNotas[x] = listaDeNotas[x-1] * 2.5;
+			System.out.println("Nota " + (x+1) + " = " + listaDeNotas[x].doubleValue());
+			soma+=listaDeNotas[x].doubleValue();
+			x++;
+		}
+
+		System.out.println("A soma de notas é = " + soma);
+		System.out.println("A média de notas é = " + soma/listaDeNotas.length);		
+		
+		for(int w=0;w<10;w++) {
+			System.out.println("Teste");
+		}
+		
 	}
 
 	
