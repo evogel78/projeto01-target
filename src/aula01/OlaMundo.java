@@ -102,9 +102,19 @@ static Boolean meuBoolean;
 		System.out.println("A soma de notas é = " + soma);
 		System.out.println("A média de notas é = " + soma/listaDeNotas.length);		
 		
-		for(int w=0;w<10;w++) {
-			System.out.println("Teste");
+		soma = 0.0;
+		listaDeNotas[0]=2.5;
+		for(int w=1;w<10;w++) {
+			listaDeNotas[w] = listaDeNotas[w-1] * 2.5;
+			System.out.println("Nota " + (w+1) + " = " + listaDeNotas[w].doubleValue());
+			soma+=listaDeNotas[w].doubleValue();
 		}
+		
+		//continue: vai pra próxima iteracao
+		//break: sai do loop
+		
+		System.out.println("A soma de notas  é = " + soma);
+		System.out.println("A média de notas é = " + soma/listaDeNotas.length);		
 		
 	}
 
